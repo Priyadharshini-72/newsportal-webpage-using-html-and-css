@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Daily News Portal</title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Internal CSS (Featured Articles) -->
+    <style>
+        .featured {
+            background-color: #f9f2ff;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .featured h2 {
+            color: #5a189a;
+            margin-bottom: 15px;
+        }
+
+        .featured-article {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .category-label {
+            background-color: #5a189a;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 14px;
+            width: fit-content;
+        }
+
+        .featured-article img {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        .featured-article p {
+            color: #333;
+            font-size: 15px;
+        }
+    </style>
+</head>
+<body>
+
+<header class="header">
+    <h1>🗞 Daily News</h1>
+</header>
+
+<!-- Sidebar with lines / grids above Home -->
+<nav class="sidebar">
+    <div class="sidebar-top">
+        <div class="line-grid">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+    </div>
+    <a href="#">Home</a>
+    <a href="#">Politics</a>
+    <a href="#">Technology</a>
+    <a href="#">Sports</a>
+    <a href="#">Entertainment</a>
+</nav>
+
+<main class="container">
+
+    <!-- Breaking News (Inline CSS) -->
+    <div style="background:red;color:white;padding:12px;border-radius:8px;font-weight:bold;margin-bottom:20px;">
+        🚨 BREAKING: Global AI Summit 2026 Begins Today!
+    </div>
+
+    <!-- Featured Section -->
+    <section class="featured">
+        <h2>⭐ Featured Story</h2>
+        <div class="featured-article">
+            <span class="category-label">AI News</span>
+            <img src="https://images.unsplash.com/photo-1526378722484-cc5c5105c35a" alt="AI News">
+            <p>
+                World leaders and tech experts gather to discuss the future of Artificial Intelligence
+                and its impact on healthcare, education, and employment.
+            </p>
+        </div>
+    </section>
+
+    <!-- Articles Grid -->
+    <section class="articles-grid">
+
+        <div class="news-card">
+            <img src="market.jpg" alt="Business News">
+            <h3>Global Markets Rise</h3>
+            <p class="excerpt">
+                Stock markets show strong growth after positive economic policy announcements.
+            </p>
+        </div>
+
+        <div class="news-card">
+            <img src="https://images.unsplash.com/photo-1581090700227-1e37b190418e" alt="Technology News">
+            <h3>AI in Education</h3>
+            <p class="excerpt">
+                Schools adopt AI tools to personalize learning and improve student performance.
+            </p>
+        </div>
+
+        <div class="news-card">
+            <img src="ch1.jpg" alt="Sports News">
+            <h3>Championship Final</h3>
+            <p class="excerpt">
+                A thrilling final match keeps fans on the edge of their seats till the last moment.
+            </p>
+        </div>
+
+    </section>
+
+    <!-- Pagination -->
+    <div class="pagination">
+        <button>« Prev</button>
+        <button class="active">1</button>
+        <button>2</button>
+        <button>3</button>
+        <button>Next »</button>
+    </div>
+
+</main>
+
+</body>
+</html>

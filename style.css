@@ -1,0 +1,139 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Header */
+.header {
+    background-color: #240046;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+/* Sidebar Navigation */
+.sidebar {
+    position: fixed;
+    top: 70px;
+    left: 0;
+    width: 200px;
+    height: 100%;
+    background-color: #240046;
+    padding: 20px;
+}
+
+.sidebar a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    margin-bottom: 15px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.sidebar a:hover {
+    color: #ffbe0b;
+}
+
+/* Main Content */
+.container {
+    margin-left: 220px;
+    padding: 20px;
+}
+
+/* Articles Grid Layout */
+.articles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+/* News Card */
+.news-card {
+    background: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+}
+
+.news-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+}
+
+.news-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+/* Card Content */
+.news-card h3 {
+    padding: 12px;
+    font-size: 18px;
+    color: #333;
+}
+
+/* Hover Excerpt */
+.excerpt {
+    padding: 12px;
+    font-size: 14px;
+    color: #444;
+    background-color: #f3e8ff;
+    opacity: 0;
+    height: 0;
+    transition: all 0.3s ease;
+}
+
+.news-card:hover .excerpt {
+    opacity: 1;
+    height: auto;
+}
+
+/* Pagination */
+.pagination {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.pagination button {
+    padding: 8px 15px;
+    margin: 5px;
+    border: none;
+    background-color: #5a189a;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.pagination button:hover {
+    background-color: #ffbe0b;
+    color: black;
+}
+
+.pagination .active {
+    background-color: #ffbe0b;
+    color: black;
+}
+
+/* Responsive Sidebar → Top Navigation */
+@media (max-width: 768px) {
+    .sidebar {
+        position: relative;
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: space-around;
+        top: 0;
+    }
+
+    .container {
+        margin-left: 0;
+    }
+}
